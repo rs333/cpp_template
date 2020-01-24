@@ -18,4 +18,5 @@ jobs:
     - name: Run a custom command
       run: 
         pwd
+        gcc --version
       
