@@ -14,5 +14,6 @@ jobs:
     - name: Run a multi-line script
       run: 
         echo Add other actions to build,
-        echo test, and deploy your project.
-        dir
+             echo test, and deploy your project.       
+       command: ["/bin/sh","-c"]
+       args: ["pwd; ls && whomai"]
