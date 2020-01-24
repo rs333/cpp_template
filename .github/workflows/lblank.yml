@@ -15,5 +15,7 @@ jobs:
       run: 
         echo Add other actions to build,
              echo test, and deploy your project.       
-       command: ["/bin/sh","-c"]
-       args: ["pwd; ls && whomai"]
+    - name: Run a custom command
+      run: 
+        pwd
+      
