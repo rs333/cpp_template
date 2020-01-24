@@ -18,5 +18,7 @@ jobs:
     - name: Run a custom command
       run: 
         pwd
+    - name: Check gcc version
+      run:
         gcc --version
       
