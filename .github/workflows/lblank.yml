@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v1
@@ -27,10 +27,6 @@ jobs:
       run: |
         mkdir build
         cd build 
-        find ../
-        pwd
         cmake ../
-        pwd
         cmake --build .
-        pwd
-        ctest 
+        ctest -C Debug
