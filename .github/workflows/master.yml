@@ -1,4 +1,4 @@
-name: WindowsMaster
+name: Master
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     - cron: "0 2 * * 1,6"   
 
 jobs:
-  build:
+  build-windows-2019:
    
     runs-on: windows-2019
 
@@ -23,4 +23,23 @@ jobs:
       run: |
         cd build
         ctest -C Debug
+        
+
+  build-ubuntu-latest:
+   
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      run: |
+        mkdir build
+        cd build 
+        cmake ../
+        make
+    - name: Test
+      run: |
+        cd build
+        ctest
+        
         
