@@ -1,5 +1,5 @@
 
-add_executable( TestEngine ${TST}/TestEngine.cpp )
+add_executable( TestEngine )
 target_sources( TestEngine
 	PRIVATE
 		${TST}/TestEngine.cpp
