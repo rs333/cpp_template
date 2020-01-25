@@ -26,7 +26,11 @@ jobs:
     - name: Prep and Run Tests
       run: |
         mkdir build
-        cd build
+        cd build 
+        find ../
+        pwd
         cmake ../
+        pwd
         cmake --build .
+        pwd
         ctest 
