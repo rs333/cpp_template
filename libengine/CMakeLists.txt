@@ -10,3 +10,5 @@ include_directories(
 	include
 )
 target_link_libraries( TestEngine gtest_main)
+
+add_test( NAME ENGINE COMMAND TestEngine )
