@@ -23,14 +23,9 @@ jobs:
     - name: Check gcc version
       run:
         gcc --version
-    - name: See what files are in the folder
+    - name: Prep and Run Tests
       run: |
         mkdir build
-        find ./ 
         cd build
-    - name: Run Cmake
-      run:
         cmake ../
-    - name: Run Ctest
-      run:
         ctest 
