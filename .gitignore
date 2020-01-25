@@ -1,5 +1,10 @@
+# build products directories
+build
 out
+
+# ide project directories
 .vs
+nbproject
 
 # Prerequisites
 *.d

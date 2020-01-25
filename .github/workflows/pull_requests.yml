@@ -1,4 +1,4 @@
-name: Windows CI
+name: Pull Requests
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  build-windows-2019:
    
     runs-on: windows-2019
 
@@ -22,4 +22,22 @@ jobs:
       run: |
         cd build
         ctest -C Debug
+        
+
+  build-ubuntu-latest:
+   
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build
+      run: |
+        mkdir build
+        cd build 
+        cmake ../
+        make
+    - name: Test
+      run: |
+        cd build
+        ctest
         
