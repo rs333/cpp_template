@@ -2,4 +2,4 @@
 Potentially a first pass at a game engine.
 
 # Latest build status
-![WindowsMaster](https://github.com/rs333/engine/workflows/WindowsMaster/badge.svg?branch=master)
+![Master](https://github.com/rs333/engine/workflows/Master/badge.svg?branch=master)
