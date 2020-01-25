@@ -1,6 +1,8 @@
-name: Master Weekly
+name: WindowsMaster
 
 on:
+  push:
+    branches: master
   schedule:
     - cron: "0 2 * * 1,6"   
 
