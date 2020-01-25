@@ -1,4 +1,4 @@
-name: CI
+name: Windows CI
 
 on:
   pull_request:
@@ -7,26 +7,19 @@ on:
 
 jobs:
   build:
-
+   
     runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!      
-    - name: Print working directory
-      run: 
-        pwd
-    - name: Determine CMake Version
-      run:
-        cmake --version
-    - name: Check gcc version
-      run:
-        echo gcc --version
-    - name: Prep and Run Tests
+    - name: Build
       run: |
         mkdir build
         cd build 
         cmake ../
         cmake --build .
+    - name: Test
+      run: |
+        cd build
         ctest -C Debug
+        
