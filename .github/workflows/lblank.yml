@@ -24,8 +24,10 @@ jobs:
       run:
         gcc --version
     - name: See what files are in the folder
-      run:
-        mkdir build ; cd build ; find ./
+      run: |
+        mkdir build
+        find ./ 
+        cd build
     - name: Run Cmake
       run:
         cmake ../
