@@ -22,7 +22,7 @@ jobs:
         cmake --version
     - name: Check gcc version
       run:
-        gcc --version
+        echo gcc --version
     - name: Prep and Run Tests
       run: |
         mkdir build
