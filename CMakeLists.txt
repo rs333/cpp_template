@@ -32,6 +32,6 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
                  ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
                  EXCLUDE_FROM_ALL)
 
-
+find_package(GDAL REQUIRED ) 
 add_subdirectory( libengine )
 
