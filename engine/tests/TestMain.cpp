@@ -46,7 +46,7 @@ protected:
         
         return retVal;
     }
-#elif
+#else
     int testMain(const char *arg1, const char *arg2=nullptr, const char *arg3=nullptr)
     {
         pid_t p = -1;
