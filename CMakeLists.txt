@@ -32,4 +32,5 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 
 
 add_subdirectory( libengine )
+add_subdirectory( engine )
 
