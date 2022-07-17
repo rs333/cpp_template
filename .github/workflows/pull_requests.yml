@@ -19,10 +19,12 @@ jobs:
         cd build 
         cmake -G "Ninja" ../
         cmake --build .
+      shell: cmd
     - name: Test
       run: |
         cd build
         ctest -C Debug
+      shell: cmd
         
 
   build-ubuntu-latest:
